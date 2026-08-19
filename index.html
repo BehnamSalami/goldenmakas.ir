@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+
+	 <meta name="Description" content="You can Contact us on this page">
+    <meta name="Keywords" content="Contact, email">
+    <meta name="author" content="salami">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+Beautiful Design | 
+دوخت کت و شلوار | سلامی | بهنام سلامی 
+</title>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Vazirmatn', Tahoma, sans-serif;
+            background-color: #f8f6f3;
+            color: #1a1a1a;
+            line-height: 1.8;
+        }
+
+        /* هدر */
+        header {
+            background: linear-gradient(135deg, #0f1c2e 0%, #1a2a40 100%);
+            color: #fff;
+            padding: 18px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #d4af37;
+        }
+
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            margin-right: 22px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* بخش قهرمان */
+        .hero {
+            background: linear-gradient(rgba(15, 28, 46, 0.85), rgba(15, 28, 46, 0.9)),
+                        url('https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 span {
+            color: #d4af37;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #d4af37;
+            color: #0f1c2e;
+            padding: 14px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn:hover {
+            background: #c9a227;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        }
+
+        /* بخش خدمات */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: #0f1c2e;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 12px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 60px;
+            height: 3px;
+            background: #d4af37;
+            border-radius: 2px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 16px;
+            padding: 35px 28px;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid #d4af37;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .service-card .icon {
+            font-size: 2.8rem;
+            margin-bottom: 18px;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            color: #0f1c2e;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #555;
+            font-size: 0.98rem;
+        }
+
+        /* کیفیت */
+        .quality {
+            background: #0f1c2e;
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .quality h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .quality h2 span {
+            color: #d4af37;
+        }
+
+        .quality p {
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* تماس */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+            text-align: center;
+        }
+
+        .contact-card h3 {
+            color: #0f1c2e;
+            margin-bottom: 18px;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .contact-card p, .contact-card a {
+            color: #444;
+            text-decoration: none;
+            display: block;
+            margin: 8px 0;
+            font-size: 1.02rem;
+            transition: color 0.3s;
+        }
+
+        .contact-card a:hover {
+            color: #d4af37;
+        }
+
+        /* فوتر */
+        footer {
+            background: #0a1420;
+            color: #ccc;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.95rem;
+        }
+
+        footer strong {
+            color: #d4af37;
+        }
+
+        /* واکنش‌گرا */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1.1rem;
+            }
+            nav {
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+            }
+            nav a {
+                margin: 0 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- هدر -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+golden <span> makas </span>
+</div>
+            <nav>
+                <a href="#services">خدمات</a>
+                <a href="#quality">کیفیت</a>
+                <a href="#contact">تماس با ما</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- بخش اصلی -->
+    <section class="hero">
+        <h1>دوخت <span>کت و شلوار</span> مردانه</h1>
+        <p>مرکز تخصصی دوخت و فروش کت شلوار و پیراهن مردانه<br>با بالاترین کیفیت و دقت در دوخت</p>
+        <a href="#contact" class="btn">سفارش دهید</a>
+    </section>
+
+    <!-- خدمات -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>خدمات ما</h2>
+            </div>
+            <div class="services">
+                <div class="service-card">
+                    <div class="icon">🧥</div>
+                    <h3>دوخت کت و شلوار</h3>
+<p>قبول انواع سفارشات به صورت سری و تکی</p>
+                    <p>
+قبول انواع سفارشات کت و شلوار مردانه با اندازه‌گیری دقیق و دوخت حرفه‌ای
+                </p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">👔</div>
+                    <h3>پیراهن مردانه</h3>
+                    <p>دوخت و فروش پیراهن‌های رسمی و روزمره با پارچه‌های مرغوب</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">✂️</div>
+                    <h3>سفارشات ویژه</h3>
+                    <p>قبول انواع سفارشات خاص و شخصی‌سازی شده مطابق سلیقه شما</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- کیفیت -->
+    <section class="quality" id="quality">
+        <div class="container">
+            <h2>کیفیت <span>هدف ماست</span></h2>
+            <p>در Beautiful Design، ما با استفاده از بهترین پارچه‌ها و تکنیک‌های دوخت مدرن، لباس‌هایی می‌دوزیم که هم زیبا و هم بادوام باشند. رضایت شما افتخار ماست.</p>
+        </div>
+    </section>
+
+    <!-- تماس -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>تماس با ما</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>📍 آدرس کارگاه</h3>
+                    <p>استان آذربایجان شرقی<br>
+                    شهرستان ملکان<br>
+                    تازه قلعه، میدان اصلی</p>
+                </div>
+                <div class="contact-card">
+                    <h3>📞 شماره تماس</h3>
+                    <a href="tel:09144214266">09144214266</a>
+                    <a href="tel:09367503013">09367503013</a>
+                    <a href="tel:04137853195">04137853195</a>
+                </div>
+                <div class="contact-card">
+                    <h3>✉️ ایمیل</h3>
+                    <a href="mailto:b_salami64@yahoo.com">b_salami64@yahoo.com</a>
+                    <a href="mailto:goldenmakas94@gmail.com">goldenmakas94@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer>
+        <p>
+ مرکز دوخت و فروش کت شلوار و پیراهن مردانه
+</p>
+        <p style="margin-top: 8px; opacity: 0.7;">کیفیت هدف ماست</p>
+    </footer>
+
+</body>
+</html>
